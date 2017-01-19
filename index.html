@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="initiate()" oncontextmenu="return false;">
+    <h1>Minesweeper</h1>
+    <div class="buttons">
+        <div onclick="diffcultyBtnClicked(this)">Beginner</div>
+        <div onclick="diffcultyBtnClicked(this)">Intermediate</div>
+        <div onclick="diffcultyBtnClicked(this)">Expert</div>
+        <div onclick="customClicked()">Custom</div>
+    </div>
+    <div class="info"> 
+        <div>Mines: <span class="mineamount"></span></div>
+        <div>Time: <span class="timer">0</span></div>
+    </div>
+    <table>
+        <tbody class="gameBoard"></tbody>
+    </table>
+    </div>
+    <div class="gameEnd"></div>
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
