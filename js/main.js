@@ -5,6 +5,9 @@ var gLevel = { size: 8, mines: 10 };
 var gCountMarked = 0;
 var gInterval;
 var gTimePassed;
+const gState = {
+
+}
 
 
 // this runs upon loading index.html
@@ -13,7 +16,7 @@ function initiate() {
     if (gInterval) clearInterval(gInterval)
     gInterval = undefined;
     var elTimer = document.querySelector('.timer');
-    elTimer.innerText = '';
+    elTimer.innerText = '0';
     var elGameEnd = document.querySelector('.gameEnd');
     elGameEnd.innerText = '';    
     gCountMarked = 0;
@@ -101,7 +104,7 @@ function cellClicked(elCell, i, j) {
 // updates timer
 function updateTime() {
     var elTimer = document.querySelector('.timer');
-    elTimer.innerText = gTimePassed / 10;
+    elTimer.innerText = gTimePassed/10;
 }
 
 // shows non mine spots up to 2 cells around
@@ -151,7 +154,8 @@ function gameOver(){
             if (gBoard[i][j].isMine && !gBoard[i][j].isMarked) {
                 var elCell = document.querySelector('#cell-' + i + '-' + j);
                 elCell.classList.remove('hidden');
-                elCell.innerText = '💥';
+                elCell.innerHTML = '<td>&#128165;</td>'
+                // elCell.innerText = '💥';
             }
         }
     }

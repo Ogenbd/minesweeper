@@ -12,6 +12,9 @@ body {
 
 .cell {
     cursor: default;
+    width:30px;
+    max-width:30px;
+    min-width: 30px;
 }
 
 .info div {
@@ -38,12 +41,6 @@ table {
     line-height: 30px;
     padding: 0px;
     outline: 1px solid black;
-}
-
-
-
-.timer {
-    padding-top: 15px;
 }
 
 .hidden {
@@ -83,7 +80,7 @@ table {
     margin: 5px;
     min-height: 50px;
     min-width: 150px;
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -91,6 +88,22 @@ table {
     background-color: black;
     color: white;
     transition: 0.4s;
+}
+
+.mineamount {
+    text-anchor: start;
+    color: red;
+    width: 30px;
+    padding:0px !important;
+    margin:0px !important; 
+}
+
+.timer {
+    text-anchor: start;
+    color: red;
+    width: 30px;
+    padding:0px !important;
+    margin:0px !important; 
 }
 
 .num1 {
